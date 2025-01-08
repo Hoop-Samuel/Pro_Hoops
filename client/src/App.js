@@ -8,6 +8,8 @@ import Menu from "./menu/Menu";
 import Basketball from './basketball/Basketball';
 import About from './about/About';
 import Collections from './collections/Collections';
+import Shop from "./shop/Shop";
+import Login from "./login/Login";
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         <Route path="programs" element={<Basketball/>}/>
         <Route path="about" element={<About/>}/>
         <Route path="collections" element={<Collections/>}/>
+        <Route path="cart" element={<Shop/>}/>
+        <Route path="person" element={<Login/>}/>
       </Routes>
     </div>
   );

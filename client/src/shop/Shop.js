@@ -1,0 +1,68 @@
+const products = [
+    {
+      id: 1,
+      name: "Basic Tee",
+      href: "#",
+      imageSrc: require("./pictures/shirt.png"), // Replace with actual path
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: "$35",
+      color: "Black",
+    },
+    {
+      id: 2,
+      name: "Classic Shirt",
+      href: "#",
+      imageSrc: require("./pictures/shorts.png"), // Replace with actual path
+      imageAlt: "Front of men's Classic Shirt in white.",
+      price: "$50",
+      color: "White",
+    },
+    {
+        id: 3,
+        name: "Socks",
+        href: "#",
+        imageSrc: require("./pictures/socks.png"), // Replace with actual path
+        imageAlt: "Front of men's Classic Shirt in white.",
+        price: "$50",
+        color: "White",
+      },
+    // Add more products as needed
+  ];
+  
+  export default function Shop() {
+    return (
+      <div className="bg-white flex justify-center">
+        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
+          <h2 className="text-center text-2xl font-bold tracking-tight text-gray-900">Products for Sale</h2>
+  
+          <div className="mt-8 grid grid-cols-1 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-6">
+            {products.map((product) => (
+              <div key={product.id} className="group relative">
+                <img
+                  alt={product.imageAlt}
+                  src={product.imageSrc}
+                  className="w-48 h-48 mx-auto rounded-md bg-gray-200 object-cover group-hover:opacity-75"
+                />
+                <div className="mt-4 flex justify-between items-center text-center">
+                  <div>
+                    <h3 className="text-sm text-gray-700">
+                      <a href={product.href}>
+                        <span aria-hidden="true" className="absolute inset-0" />
+                        {product.name}
+                      </a>
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                  </div>
+                  <p className="text-sm font-medium text-gray-900">{product.price}</p>
+                </div>
+                <button className="mt-4 w-3/4 mx-auto block rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
+                  Add to Cart
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+  
