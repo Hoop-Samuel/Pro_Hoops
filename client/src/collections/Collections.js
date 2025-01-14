@@ -1,8 +1,6 @@
-// src/Collections.js
-
 import React from 'react';
-import Masonry from 'react-masonry-css'; // Import Masonry for layout
-import './Collections.css'; // Import the custom styles
+import Masonry from 'react-masonry-css'; 
+import './Collections.css'; 
 
 // Dynamically import images from the 'pictures' folder
 const importImages = () => {
@@ -20,11 +18,11 @@ const Collections = () => {
   const breakpoints = {
     default: 3, // 3 columns by default
     1100: 2, // 2 columns for screens <= 1100px
-    700: 1, // 1 column for screens <= 700px
+    700: 2, // 2 column for screens <= 700px
   };
 
   return (
-    <div>
+    <div className="collections-container">
       {/* Header and description above the images */}
       <div className="header-container">
         <h1>Basketball Camps with Coach Ivica</h1>
@@ -44,8 +42,7 @@ const Collections = () => {
         >
           {images.map((image, index) => (
             <div key={index} className="image-item">
-              <img src={image} alt={`Camp Image ${index + 1}`} />
-              <h3>Practice {index + 1}</h3> {/* Title */}
+              <img src={image} alt={`Camp ${index + 1}`} />
             </div>
           ))}
         </Masonry>

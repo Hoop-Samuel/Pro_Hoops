@@ -1,60 +1,58 @@
-/* src/Collections.css */
+.collections-container {
+  background-color: #e5e5e5; /* Set background color */
+  padding: 20px; /* Add padding to prevent content from touching the edges */
+}
 
 /* Styling for the header and description */
 .header-container {
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 40px; /* Adds space below the header */
-    margin-top: 100px; /* Pushes the header lower */
-  }
-  
-  .header-container h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .header-container p {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #555;
-  }
-  
-  /* Styling for the Masonry Layout */
-  .masonry-container {
-    padding: 20px;
-    margin-top: 50px; /* Adds space between header and images */
-  }
-  
-  .my-masonry-grid {
-    display: flex;
-    margin-left: -10px; /* gutter size offset */
-    width: auto;
-  }
-  
-  .my-masonry-grid_column {
-    padding-left: 10px; /* gutter size */
-    background-clip: padding-box;
-  }
-  
-  /* Individual image item styles */
-  .image-item {
-    margin-bottom: 20px;
-    text-align: center; /* Center-align titles */
-  }
-  
-  .image-item img {
-    width: 80%; /* Makes images smaller */
-    max-width: 300px; /* Limits maximum size of images */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    object-fit: cover;
-  }
-  
-  .image-item h3 {
-    font-size: 16px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 40px; /* Adds space below the header */
+  margin-top: 100px; /* Pushes the header lower */
+}
+
+.header-container h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.header-container p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Styling for the Masonry Layout */
+.masonry-container {
+  max-width: 1200px; /* Restrict max width */
+  margin: 0 auto; /* Center the grid */
+  padding: 10px; /* Add spacing inside */
+}
+
+/* Default desktop grid layout using Flexbox (Masonry is applied here for desktop) */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -10px; /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 10px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Individual image item styles */
+.image-item {
+  margin-bottom: 20px;
+  text-align: center; /* Center-align titles */
+}
+
+.image-item img {
+  width: 100%; /* Adjust images to fit column width */
+  max-width: 300px; /* Limit max width */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  object-fit: cover; /* Ensure proper scaling */
+}

@@ -2,154 +2,153 @@
 
 /* Ensure the background color and layout are applied to the entire component */
 .about-page {
-    height: 100%;
-    margin: 0;
-    background-color: #e5e5e5; /* Light gray background */
-    overflow-x: hidden;
-  }
-  
-  .about-page .about-section {
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    padding: 60px 0;
-  }
-  
-  /* Section Layout */
+  height: 100%;
+  margin: 0;
+  background-color: #e5e5e5; /* Light gray background */
+  overflow-x: hidden;
+}
+
+.about-page .about-section {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  padding: 60px 0;
+}
+
+/* Section Layout */
+.about-page .section-row {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px); /* Start with a slight downward offset */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  margin-bottom: 50px;
+}
+
+.about-page .section-row.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-page .section-row.reverse.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Images Styling */
+.about-page .image {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  border-radius: 8px;
+}
+
+/* Text Styling */
+.about-page .text {
+  margin-left: 30px;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  max-width: 500px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about-page .section-row.reverse .text {
+  margin-left: 0;
+  margin-right: 30px;
+  text-align: left;
+  margin-top: 30px;
+  max-width: 520px;
+  margin-left: auto;
+}
+
+/* Heading and paragraph adjustments */
+.about-page .text h2 {
+  font-family: "Anton", serif;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.about-page .text p {
+  font-size: 1.3rem;
+  color: #0a0909;
+}
+
+/* Responsive adjustments */
+
+/* For tablet screens */
+@media (max-width: 1024px) {
   .about-page .section-row {
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transform: translateY(20px); /* Start with a slight downward offset */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    margin-bottom: 50px;
+    flex-direction: column; /* Stack vertically */
+    text-align: center; /* Center align text for readability */
   }
-  
-  .about-page .section-row.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .about-page .section-row.reverse.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Images Styling */
+
   .about-page .image {
-    width: 100%;
+    max-width: 80%; /* Slightly smaller image on tablet */
     height: auto;
-    max-width: 700px;
-    border-radius: 8px;
   }
-  
-  /* Text Styling */
+
   .about-page .text {
-    margin-left: 30px;
-    font-size: 1.8rem;
-    line-height: 1.7;
-    max-width: 500px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem; /* Slightly smaller text */
+    margin: 20px 0; /* Adjust spacing for better layout */
+    max-width: 100%; /* Full width for text */
   }
-  
-  .about-page .section-row.reverse .text {
-    margin-left: 0;
-    margin-right: 30px;
-    text-align: left;
-    margin-top: 30px;
-    max-width: 520px;
-    margin-left: auto;
-  }
-  
-  /* Heading and paragraph adjustments */
+
   .about-page .text h2 {
-    font-family: "Anton", serif;
-    font-size: 2.4rem;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Smaller heading */
   }
-  
+
   .about-page .text p {
-    font-size: 1.3rem;
-    color: #0a0909;
+    font-size: 1.1rem; /* Slightly smaller paragraph text */
   }
-  
-  /* Responsive adjustments */
-  
-  /* For tablet screens */
-  @media (max-width: 1024px) {
-    .about-page .section-row {
-      flex-direction: column; /* Stack vertically */
-      text-align: center; /* Center align text for readability */
-    }
-  
-    .about-page .image {
-      max-width: 80%; /* Slightly smaller image on tablet */
-      height: auto;
-    }
-  
-    .about-page .text {
-      font-size: 1.5rem; /* Slightly smaller text */
-      margin: 20px 0; /* Adjust spacing for better layout */
-      max-width: 100%; /* Full width for text */
-    }
-  
-    .about-page .text h2 {
-      font-size: 2rem; /* Smaller heading */
-    }
-  
-    .about-page .text p {
-      font-size: 1.1rem; /* Slightly smaller paragraph text */
-    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .about-page .section-row {
+    flex-direction: column; /* Stack vertically */
+    text-align: center; /* Center align text */
   }
-  
-  /* For mobile screens */
-  @media (max-width: 768px) {
-    .about-page .section-row {
-      flex-direction: column; /* Stack vertically */
-      text-align: center; /* Center align text */
-    }
-  
-    .about-page .image {
-      max-width: 90%; /* Further reduce image size on mobile */
-      height: auto;
-    }
-  
-    .about-page .text {
-      font-size: 1.2rem; /* Reduce text size further on mobile */
-      margin: 10px 0; /* Adjust margin for smaller screens */
-      max-width: 100%; /* Full width text */
-    }
-  
-    .about-page .text h2 {
-      font-size: 1.8rem; /* Further reduce heading size */
-    }
-  
-    .about-page .text p {
-      font-size: 1rem; /* Reduce paragraph size */
-    }
+
+  .about-page .image {
+    max-width: 90%; /* Further reduce image size on mobile */
+    height: auto;
   }
-  
-  /* For very small screens (smaller than 480px) */
-  @media (max-width: 480px) {
-    .about-page .section-row {
-      flex-direction: column; /* Stack vertically */
-      text-align: center; /* Center align text */
-    }
-  
-    .about-page .image {
-      max-width: 95%; /* Further reduce image size on very small screens */
-      height: auto;
-    }
-  
-    .about-page .text {
-      font-size: 1rem; /* Very small font size for very small screens */
-      margin: 5px 0; /* Reduce margins */
-    }
-  
-    .about-page .text h2 {
-      font-size: 1.6rem; /* Further reduce heading size */
-    }
-  
-    .about-page .text p {
-      font-size: 0.9rem; /* Reduce paragraph size more */
-    }
+
+  .about-page .text {
+    font-size: 1.2rem; /* Reduce text size further on mobile */
+    margin: 10px 0; /* Adjust margin for smaller screens */
+    max-width: 100%; /* Full width text */
   }
-  
+
+  .about-page .text h2 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .about-page .text p {
+    font-size: 1rem; /* Reduce paragraph size */
+  }
+}
+
+/* For very small screens (smaller than 480px) */
+@media (max-width: 480px) {
+  .about-page .section-row {
+    flex-direction: column; /* Stack vertically */
+    text-align: center; /* Center align text */
+  }
+
+  .about-page .image {
+    max-width: 95%; /* Further reduce image size on very small screens */
+    height: auto;
+  }
+
+  .about-page .text {
+    font-size: 1rem; /* Very small font size for very small screens */
+    margin: 5px 0; /* Reduce margins */
+  }
+
+  .about-page .text h2 {
+    font-size: 1.6rem; /* Further reduce heading size */
+  }
+
+  .about-page .text p {
+    font-size: 0.9rem; /* Reduce paragraph size more */
+  }
+}

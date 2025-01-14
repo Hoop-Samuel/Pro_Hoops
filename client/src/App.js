@@ -10,6 +10,7 @@ import About from './about/About';
 import Collections from './collections/Collections';
 import Shop from "./shop/Shop";
 import Login from "./login/Login";
+import Register from "./login/Register";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="collections" element={<Collections/>}/>
         <Route path="cart" element={<Shop/>}/>
         <Route path="person" element={<Login/>}/>
+        <Route path="register" element={<Register/>}/>
       </Routes>
     </div>
   );
