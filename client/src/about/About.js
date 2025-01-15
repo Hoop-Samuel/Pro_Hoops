@@ -50,11 +50,12 @@ const About = () => {
         >
           <img src={aboutImage1} alt="About 1" className="image" />
           <div className="text">
-            <h2>Our Mission</h2>
+            <h2> World-Class Training with Certified Expertise </h2>
             <p>
-              Our mission is to provide a professional and enjoyable basketball
-              experience, helping players of all skill levels improve their
-              game while promoting teamwork and sportsmanship.
+            Coach Ivica brings the best of basketball training to you 
+            as a certified trainer under NBA Skills basketball expert Micah Lancaster.
+            His programs combine advanced techniques and proven methods 
+            to elevate your game to professional standards.
             </p>
           </div>
         </div>
@@ -64,11 +65,11 @@ const About = () => {
           className={`section-row reverse ${isSection2Visible ? 'animate' : ''}`}
         >
           <div className="text">
-            <h2>What We Offer</h2>
+            <h2> Built for Every Level, Designed for Success </h2>
             <p>
-              We offer personalized training programs, clinics, and competitive
-              events that cater to both beginners and advanced players. Our
-              experienced coaches will help you reach your full potential.
+            From foundational skills to elite performance strategies, 
+            Coach Ivica’s programs are crafted to meet you where you are. 
+            Let’s take your game to new heights with the guidance of a certified expert.
             </p>
           </div>
           <img src={aboutImage2} alt="About 2" className="image" />

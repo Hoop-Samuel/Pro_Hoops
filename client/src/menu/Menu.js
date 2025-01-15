@@ -53,7 +53,7 @@ const Menu = () => {
         </div>
         <div
           className={`menu__item ${activeIndex === 3 ? "active" : ""}`}
-          onClick={() => handleItemClick(3, "/collections")}
+          onClick={() => handleItemClick(3, "/gallery")}
         >
           <img
             src={collections}
@@ -63,7 +63,7 @@ const Menu = () => {
         </div>
         <div
           className={`menu__item ${activeIndex === 4 ? "active" : ""}`}
-          onClick={() => handleItemClick(4, "/person")}
+          onClick={() => handleItemClick(4, "/login")}
         >
           <img
             src={person}

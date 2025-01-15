@@ -168,7 +168,7 @@ export default function Register() {
         {/* Link to Login page */}
         <p className="mt-10 text-center text-sm text-gray-500">
           Already a member?{' '}
-          <Link to="/person" className="font-semibold text-[#f4511e] hover:text-[#e64a19]">
+          <Link to="/login" className="font-semibold text-[#f4511e] hover:text-[#e64a19]">
             Sign in here
           </Link>
         </p>

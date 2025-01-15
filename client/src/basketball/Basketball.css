@@ -10,7 +10,7 @@
 
 /* Style the background video */
 .basketball-video {
-    position: absolute;
+    position: fixed; /* Ensures the video stays behind the text */
     top: 0;
     left: 0;
     width: 100%; /* Full width */
@@ -28,14 +28,28 @@
     text-align: center;
     color: white; /* White text for visibility */
     z-index: 1; /* Place above the video */
+    padding: 2em;
+    background:  rgba(29, 29, 39, 0.7); /* Semi-transparent black background */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds a soft shadow */
 }
 
 /* Title styling */
 .basketball-title {
+    font-family: "Oswald", sans-serif;
     font-size: 3em;
     font-weight: bold;
-    margin-bottom: 1em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow for readability */
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for additional contrast */
+}
+
+/* Paragraph styling */
+.basketball-description {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
 }
 
 /* Button styling */
@@ -57,10 +71,28 @@
 
 /* Responsiveness */
 @media screen and (max-width: 768px) {
-    .basketball-title {
-        font-size: 2em;
+    /* Adjust video to maintain full-screen appearance */
+    .basketball-video {
+        height: 100vh;
+        width: auto; /* Maintain aspect ratio */
+        min-width: 100%; /* Ensure it covers horizontally */
+        min-height: 100%; /* Ensure it covers vertically */
     }
-  
+
+    /* Adjust overlay for smaller screens */
+    .basketball-overlay {
+        padding: 1em;
+        width: 90%; /* Ensure the text doesn't overflow the screen */
+    }
+
+    .basketball-title {
+        font-size: 2em; /* Adjust header size */
+    }
+
+    .basketball-description {
+        font-size: 1em; /* Adjust paragraph size */
+    }
+
     .basketball-button {
         font-size: 1em;
         padding: 0.6em 1.2em;
