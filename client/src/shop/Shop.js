@@ -1,3 +1,7 @@
+import React from "react";
+import './Shop.css';
+
+// Products data
 const products = [
   {
     id: 1,
@@ -33,9 +37,12 @@ export default function Shop() {
     <div className="bg-[#e5e5e5] flex justify-center items-center min-h-screen">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
         {/* Header */}
-        <h2 className="mt-8 mb-8 text-center text-2xl font-bold tracking-tight text-gray-900">
-          Products for Sale
+        <h2 className="shop-title mt-8 mb-2">
+          Shop Basketball Apparel
         </h2>
+        <p className="shop-description mb-8">
+          Browse through our curated selection of basketball gear and accessories.
+        </p>
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-12">
@@ -61,8 +68,7 @@ export default function Shop() {
               </div>
 
               {/* Add to Cart Button */}
-              <button className="mt-6 w-3/4 mx-auto block rounded-md bg-[#f4511e] px-4 py-2 text-sm font-medium text-white hover:bg-[#8E24AA]">                Add to Cart
-              </button>
+              <button className="mt-6 w-3/4 mx-auto block rounded-md bg-[#f4511e] px-4 py-2 text-sm font-medium text-white hover:bg-[#8E24AA]">Add to Cart</button>
             </div>
           ))}
         </div>

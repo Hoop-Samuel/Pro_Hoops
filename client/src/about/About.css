@@ -47,7 +47,7 @@
   font-size: 1.8rem;
   line-height: 1.7;
   max-width: 500px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Change to Poppins for paragraphs */
 }
 
 .about-page .section-row.reverse .text {
@@ -61,14 +61,14 @@
 
 /* Heading and paragraph adjustments */
 .about-page .text h2 {
-  font-family: "Anton", serif;
+  font-family: 'Bebas Neue', sans-serif; /* Change to Bebas Neue for headers */
   font-size: 2.4rem;
   margin-bottom: 1rem;
 }
 
 .about-page .text p {
   font-size: 1.3rem;
-  color: #0a0909;
+  color: #555;
 }
 
 /* Responsive adjustments */

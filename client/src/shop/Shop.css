@@ -1,0 +1,16 @@
+/* Shop Title Styling */
+.shop-title {
+    font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+    font-size: 2.4rem; /* Adjusted font size */
+    font-weight: normal; /* Make the font not bold */
+    text-align: center; /* Ensure the title is centered */
+  }
+  
+  /* Shop Description Styling */
+  .shop-description {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    font-size: 1rem; /* Standard size for description */
+    text-align: center; /* Center-align the description */
+    color: #555; /* A subtle gray color for the description */
+  }
+  
