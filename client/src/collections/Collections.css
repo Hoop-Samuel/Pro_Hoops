@@ -1,3 +1,4 @@
+/* Collections Container */
 .collections-container {
   background-color: #e5e5e5; /* Set background color */
   padding: 20px; /* Add padding to prevent content from touching the edges */
@@ -12,16 +13,20 @@
 }
 
 .header-container h1 {
-  font-size: 36px;
-  font-weight: bold;
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+  font-size: 2.4rem; /* Adjusted font size for header */
+  font-weight: normal; /* Make the font not bold */
+  text-align: center; /* Ensure the title is centered */
+  color: #333; /* Title color */
   margin-bottom: 10px;
-  color: #333;
 }
 
 .header-container p {
-  font-size: 18px;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+  font-size: 1rem; /* Standard size for description */
+  text-align: center; /* Center-align the description */
+  color: #555; /* A subtle gray color for the description */
   line-height: 1.5;
-  color: #555;
 }
 
 /* Styling for the Masonry Layout */

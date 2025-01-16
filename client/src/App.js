@@ -11,6 +11,7 @@ import Collections from './collections/Collections';
 import Shop from "./shop/Shop";
 import Login from "./login/Login";
 import Register from "./login/Register";
+import BasketballPrograms from "./basketball/programs/BasketballPrograms";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="cart" element={<Shop/>}/>
         <Route path="login" element={<Login/>}/>
         <Route path="register" element={<Register/>}/>
+        <Route path="training" element = {<BasketballPrograms/>}/>
       </Routes>
     </div>
   );

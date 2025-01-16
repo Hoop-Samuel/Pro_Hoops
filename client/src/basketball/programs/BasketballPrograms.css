@@ -1,0 +1,119 @@
+.basketball-programs {
+  width: 100%; /* Full width of the screen */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: Arial, sans-serif;
+  padding-top: 7rem; /* Add spacing below the menu */
+  background-color: #e5e5e5; /* Light gray background for the container */
+}
+
+.program.h1 {
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+  font-weight: normal; /* Make the font not bold */
+  text-align: center; /* Ensure the title is centered */
+  color: #333;
+  font-size: 1.9rem; /* Reduced font size */
+  margin-bottom: 1.5rem;
+}
+
+.program-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller minimum card size */
+  gap: 1.5rem; /* Reduce gap between cards */
+}
+
+.program-card {
+  background-color: white; /* White background for the cards */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 280px; /* Limit the width of the cards */
+  margin: 0 auto; /* Center the cards within the grid */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure all cards have the same height */
+}
+
+.program-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transform: translateY(-3px); /* Slight upward shift */
+}
+
+.program-card-image {
+  height: 150px; /* Smaller image height */
+  overflow: hidden;
+}
+
+.program-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover .program-card-image img {
+  transform: scale(1.05); /* Subtle zoom */
+}
+
+.program-card-content {
+  padding: 1rem; /* Reduce padding inside the card */
+  flex-grow: 1; /* Allow content to stretch and fill available space */
+}
+
+.program-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem; /* Added to push the title lower */
+}
+
+.program-card-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.program-card-description {
+  color: #666;
+  font-size: 0.875rem; /* Slightly smaller description */
+  margin-bottom: 0.5rem;
+}
+
+.program-card-price {
+  font-size: 1.25rem; /* Adjusted font size for price */
+  font-weight: bold;
+  color: #f4511e;
+  margin-bottom: 1rem;
+}
+
+.program-card-footer {
+  padding: 0.5rem 1rem; /* Reduced padding for footer */
+  background-color: #f8f8f8;
+}
+
+.purchase-button {
+  width: 100%;
+  padding: 0.5rem; /* Smaller button padding */
+  background-color: #f4511e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem; /* Smaller button text */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.purchase-button:hover {
+  background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+  .basketball-programs {
+    padding-top: 4rem; /* Adjust spacing for smaller screens */
+  }
+
+  .program-cards {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+}

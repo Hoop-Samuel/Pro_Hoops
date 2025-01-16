@@ -1,8 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Basketball.css";
-import backgroundVideo from "./videobackground.mp4"; 
+
+/* Background Video */
+import backgroundVideo from "./videobackground.mp4";
 
 const Basketball = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/training");
+  };
+
   return (
     <div className="basketball-container">
       <video
@@ -19,7 +28,12 @@ const Basketball = () => {
           strategy, our programs are designed to grow with you. Join our
           community and take your game to the next level.
         </p>
-        <button className="basketball-button">Explore Programs</button>
+        <button
+          className="basketball-button"
+          onClick={handleButtonClick}
+        >
+          Explore Programs
+        </button>
       </div>
     </div>
   );
