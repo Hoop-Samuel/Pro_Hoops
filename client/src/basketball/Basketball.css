@@ -28,7 +28,7 @@
     text-align: center;
     color: white; /* White text for visibility */
     z-index: 1; /* Place above the video */
-    padding: 2em;
+    padding: 1em;
     background:  rgba(29, 29, 39, 0.7); /* Semi-transparent black background */
     border-radius: 10px; /* Slightly rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds a soft shadow */

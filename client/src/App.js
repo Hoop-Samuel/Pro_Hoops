@@ -1,8 +1,12 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css"; 
 
-import Menu from "./menu/Menu"; 
+/* Screen Loader*/
+import LottieLoader from "./loader/LottieLoader";
+
+/* Menu*/
+import ResponsiveMenu from "./menu/ResponsiveMenu";
 
 /*Pages*/
 import Basketball from './basketball/Basketball';
@@ -13,13 +17,27 @@ import Login from "./login/Login";
 import Register from "./login/Register";
 import BasketballPrograms from "./basketball/programs/BasketballPrograms";
 
-
 function App() {
+
+  const [loading, setLoading] = useState(true); // Loading state
+
+  useEffect(() => {
+    // Simulate loading process (e.g., fetching data, preloading resources)
+    setTimeout(() => {
+      setLoading(false); // Set loading to false once content is loaded
+    }, 3000); // Simulating a 3-second load time, adjust as necessary
+  }, []);
+
   return (
     <div className="App">
-      <Menu />
+       {/* Show the LottieLoader until the page is fully loaded */}
+       {loading && <LottieLoader />}
+      
+      <ResponsiveMenu/>
+
       <Routes>
-        <Route path="programs" element={<Basketball/>}/>
+        <Route path="/" element={<Basketball/>}/>
+        <Route path="/programs" element={<Basketball/>}/>
         <Route path="about" element={<About/>}/>
         <Route path="gallery" element={<Collections/>}/>
         <Route path="cart" element={<Shop/>}/>

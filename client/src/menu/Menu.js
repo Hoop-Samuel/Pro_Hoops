@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Menu.css"; // Importing the CSS file
+import "./Menu.css"; 
 
 /* Import SVG Icons */
 import basketball from "./icons/basketball.svg";

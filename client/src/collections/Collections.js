@@ -1,5 +1,5 @@
-import React from 'react';
-import Masonry from 'react-masonry-css'; 
+import React, { useState, useEffect } from 'react';
+import Masonry from 'react-masonry-css';
 import './Collections.css'; 
 
 // Dynamically import images from the 'pictures' folder
@@ -13,6 +13,7 @@ const importImages = () => {
 };
 
 const Collections = () => {
+  const [loadedImagesCount, setLoadedImagesCount] = useState(0); // Count of loaded images
   const images = importImages();
 
   const breakpoints = {
@@ -20,6 +21,14 @@ const Collections = () => {
     1100: 2, // 2 columns for screens <= 1100px
     700: 2, // 2 column for screens <= 700px
   };
+
+  const handleImageLoad = () => {
+    setLoadedImagesCount((prevCount) => prevCount + 1);
+  };
+
+  useEffect(() => {
+    // Placeholder if additional logic is needed when all images are loaded
+  }, [loadedImagesCount, images.length]);
 
   return (
     <div className="collections-container">
@@ -42,7 +51,12 @@ const Collections = () => {
         >
           {images.map((image, index) => (
             <div key={index} className="image-item">
-              <img src={image} alt={`Camp ${index + 1}`} />
+              <img 
+                src={image} 
+                alt={`Camp ${index + 1}`} 
+                onLoad={handleImageLoad} // Trigger handleImageLoad when each image is loaded
+                style={{ width: '100%' }} 
+              />
             </div>
           ))}
         </Masonry>
