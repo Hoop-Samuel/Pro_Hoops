@@ -37,13 +37,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Basketball/>}/>
-        <Route path="/programs" element={<Basketball/>}/>
-        <Route path="about" element={<About/>}/>
-        <Route path="gallery" element={<Collections/>}/>
-        <Route path="cart" element={<Shop/>}/>
+        <Route path="home" element={<Basketball/>}/>
+        <Route path="meetthecoach" element={<About/>}/>
+        <Route path="photogallery" element={<Collections/>}/>
+        <Route path="gearup" element={<Shop/>}/>
         <Route path="login" element={<Login/>}/>
         <Route path="register" element={<Register/>}/>
-        <Route path="training" element = {<BasketballPrograms/>}/>
+        <Route path="trainingprograms" element = {<BasketballPrograms/>}/>
       </Routes>
     </div>
   );

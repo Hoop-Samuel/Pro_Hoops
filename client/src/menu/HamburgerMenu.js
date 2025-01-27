@@ -20,10 +20,11 @@ const HamburgerMenu = () => {
   // List of routes
   const routes = [
     { path: '/', name: 'Home' },
-    { path: '/about', name: 'About' },
-    { path: '/gallery', name: 'Gallery' },
-    { path: '/cart', name: 'Cart' },
-    { path: '/login', name: 'Login' },
+    { path: '/trainingprograms', name: 'Training Programs'},
+    { path: '/meethtecoach', name: 'Meet the Coach' },
+    { path: '/gearup', name: 'Gear up' },
+    { path: '/photogallery', name: 'Photo Gallery' },
+    { path: '/login', name: 'Sign In / Register' },
   ];
 
   return (

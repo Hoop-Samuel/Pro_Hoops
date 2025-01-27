@@ -9,7 +9,7 @@ const Basketball = () => {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
-    navigate("/training");
+    navigate("/trainingprograms");
   };
 
   return (
